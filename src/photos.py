@@ -59,7 +59,6 @@ def new_filename(file):
 def process_zip(zip_filename):
     with ZipFile(zip_filename) as zip:
         shutil.rmtree(path_tmp, ignore_errors=True)
-        # print()
         print("==> Extracting", zip_filename)
         zip.extractall(path=path_tmp)
         with changed_dir(path_tmp):
